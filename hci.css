@@ -1,0 +1,150 @@
+body,html {
+    background-image: url("books.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1{
+    color: azure;
+  }
+
+  .search{
+    background: #e6e8ee;
+    border-radius: 20px;
+    padding-left: 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border: #2d2c2c;
+  }
+
+  input{
+    border: #2d2c2c;
+    outline: #2d2c2c;
+    flex: 1;
+    background: transparent;
+    padding: 15px;
+  }
+
+  button{
+    font-size: 16px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    padding: 16px 50px;
+    background: #4880e9;
+    color: #fff;
+    border-radius: 40px;
+  }
+
+  ul li{
+    list-style: none;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  ul li::before{
+    content:'';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("redcircle.jpeg");
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left: 8px;
+  }
+
+  ul li.completed{
+    color:rgb(154, 32, 32);
+    text-decoration: none;
+  }
+
+  ul li.completed::before{
+    background-image: url("check.jpeg");
+  }
+
+  ul li span{
+    right:0;
+    top:5px;
+    width: 60px;
+    position: absolute;
+    height:50px;
+    font-size:22px;
+    color: #2d2c2c;
+    line-height: 40px;
+    text-align:center;
+  }
+ul li span:hover{
+    background: #edeef0;
+}
+
+details {
+    position: relative;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  summary {
+    width: 100%;
+    padding: 20px;
+    padding-left: 25px;
+    border-bottom: 1px solid #4d4444;
+  }
+  
+  summary:hover {
+    color: #08407d;
+  }
+  
+  summary:focus {
+    outline: none;
+  }
+  
+  details[open] summary:before {
+    transform: rotate(90deg);
+  }
+  
+  details[open] > summary {
+    color: #000000;
+  }
+  
+  details[open] > summary ~ * {
+    animation: open 1s ease;
+  }
+  
+  p.source {
+    padding-top: 50px;
+    font-size: 0.75em;
+    text-align: center;
+  }
+  
+  @keyframes open {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+.due-date{
+  font-size: 12px;
+  width: 120px;
+  display: block;
+}
+.nav{
+  color: rgb(8, 239, 251);
+  text-decoration: underline;
+  text-align: center;
+  padding: 5px;
+}

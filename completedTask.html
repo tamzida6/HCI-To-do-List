@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Completed Task</title>
+    <link rel="stylesheet" type="text/css" href="hci.css" />
+  </head>
+  <body>
+    <div style="background-image: url(black.jpeg)">
+      <hr />
+      <center><h1>Completed Tasks</h1></center>
+      <hr />
+      <a href="./index.html" class="nav"><h3>Back To To-Do List</h3></a>
+    </div>
+    <ul id="completed-list"></ul>
+    <script>
+      const storedTasks = localStorage.getItem("tasks");
+      let tasks = storedTasks ? JSON.parse(storedTasks) : [];
+      console.log(tasks);
+      tasks = tasks.filter((task) => task.completed);
+      const completedListContainer = document.getElementById("completed-list");
+      completedListContainer.innerHTML = tasks
+        .map((task) => `<li class="completed">${task.description}</li>`)
+        .join("");
+    </script>
+  </body>
+</html>

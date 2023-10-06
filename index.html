@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CISC 3650 Project 1</title>
+    <link rel="stylesheet" type="text/css" href="hci.css" />
+  </head>
+  <body>
+    <div style="background-image: url(black.jpeg)">
+      <hr />
+      <center><h1>To-Do List</h1></center>
+      <hr />
+      <a href="./completedTask.html" class="nav"><h3>Completed Tasks</h3></a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+          <br />
+          <details>
+            <summary style="font-family: Verdana, Geneva, Tahoma, sans-serif">
+              Why Keep a To-Do List? 🤔?
+            </summary>
+            <p style="font-family: monospace">
+              By keeping such a list, you make sure that your tasks are written
+              down all in one place so you don't forget anything important. And
+              by prioritizing tasks, you plan the order in which you'll do them,
+              so that you can tell what needs your immediate attention, and what
+              you can leave until later.Writing your daily tasks on a list can
+              help you increase productivity and decrease stress. To-do lists
+              enable you to segment your goals into achievable activities and
+              complete large projects by breaking them into smaller assignments.
+              Recording tasks can allow you to better manage your time and
+              encourages you to achieve more throughout your day.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="search">
+      <input type="text" id="input-box" placeholder="Add a Task" />
+      <input type="date" id="due-date" />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <b><h2 style="font-family: cursive">TASKS:</h2></b>
+    <ul id="list">
+      <!--<li class="completed">Do Homework</li>
+      <br />
+      <li>Study</li>-->
+    </ul>
+    <script src="hci.js"></script>
+  </body>
+</html>
